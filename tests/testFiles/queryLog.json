@@ -1,0 +1,25 @@
+[
+  {
+    "query": "select \"accession_number\" from \"form_4_transaction_ledger_entries\" where \"rptOwnerCik\" = ?",
+    "bindings": [
+      "0981959539"
+    ],
+    "time": 0.24
+  },
+  {
+    "query": "select \"rptOwnerCik\" from \"form_4_transaction_ledger_entries\" where \"accession_number\" in (?, ?)",
+    "bindings": [
+      "0981959539-91-201851",
+      "8997568200-93-888045"
+    ],
+    "time": 0.6
+  },
+  {
+    "query": "select * from \"form_4_transaction_ledger_entries\" where \"rptOwnerCik\" in (?) and \"id\" != ?",
+    "bindings": [
+      "0981959539",
+      1
+    ],
+    "time": 0.21
+  }
+]

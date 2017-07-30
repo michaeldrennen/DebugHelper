@@ -10,13 +10,14 @@ use League\CLImate\CLImate;
 class DebugHelper {
 
     /**
-     * @param array $queryLog   A Laravel query log variable is a numerically indexed array of the queries that have been executed since you
-     *                          enabled the DB query log with DB::enableQueryLog().
-     *                          A line from a Laravel query log is an associative array with three elements:
-     *                          - query
-     *                          - bindings
-     *                          - time
-     *                          This method prints out the query log in a CLImate table.
+     * @param array $queryLog     A Laravel query log variable is a numerically indexed array of the queries that have been executed since
+     *                            you enabled the DB query log with DB::enableQueryLog(). A line from a Laravel query log is an associative
+     *                            array with three elements:
+     *                            - query
+     *                            - bindings
+     *                            - time
+     *                            This method prints out the query log in a CLImate table.
+     * @param bool  $returnString Do you want to return the CLImate table as a string?
      *
      * @link http://climate.thephpleague.com/
      */

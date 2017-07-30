@@ -13,7 +13,7 @@ class DebugHelperTest extends TestCase {
     public function testLaravelReturnQueryLogTableString () {
 
         $this->expectOutputRegex( '/-----------------------------------------------------------------------------------------------------------------------------------------------/' );
-        $queryLogJsonContent = file_get_contents( './tests/testFiles/laravelQueryLog.json' );
+        $queryLogJsonContent = file_get_contents( 'https://raw.githubusercontent.com/michaeldrennen/DebugHelper/master/tests/testFiles/laravelQueryLog.json' );
         $queryLog            = json_decode( $queryLogJsonContent, true );
         $actualOutput        = DebugHelper::laravelPrintQueryLog( $queryLog, true );
         print( $actualOutput );
@@ -36,7 +36,7 @@ class DebugHelperTest extends TestCase {
     public function testLaravelPrintQueryLogWithInvalidJsonShouldThrowException () {
 
         $this->expectException( \TypeError::class );
-        $queryLogJsonContent = file_get_contents( './tests/testFiles/laravelQueryLogInvalid.json' );
+        $queryLogJsonContent = file_get_contents( 'https://raw.githubusercontent.com/michaeldrennen/DebugHelper/master/tests/testFiles/laravelQueryLog.json' );
         $queryLog            = json_decode( $queryLogJsonContent, true );
         DebugHelper::laravelPrintQueryLog( $queryLog );
     }

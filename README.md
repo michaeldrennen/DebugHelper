@@ -1,10 +1,10 @@
 #DebugHelper
 
 <p align="left">
-<a href="https://travis-ci.org/michaeldrennen/debug-helper"><img src="https://travis-ci.org/michaeldrennen/debug-helper.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/tinker"><img src="https://poser.pugx.org/michaeldrennen/debug-helper/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/tinker"><img src="https://poser.pugx.org/michaeldrennen/debug-helper/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/tinker"><img src="https://poser.pugx.org/michaeldrennen/debug-helper/license.svg" alt="License"></a>
+<a href="https://travis-ci.org/michaeldrennen/debug-helper"><img src="https://travis-ci.org/michaeldrennen/DebugHelper.svg?branch=master" alt="Build Status"></a>
+[![Latest Stable Version](https://poser.pugx.org/michaeldrennen/debug-helper/v/stable)](https://packagist.org/packages/michaeldrennen/debug-helper)
+[![Total Downloads](https://poser.pugx.org/michaeldrennen/debug-helper/downloads)](https://packagist.org/packages/michaeldrennen/debug-helper)
+[![License](https://poser.pugx.org/michaeldrennen/debug-helper/license)](https://packagist.org/packages/michaeldrennen/debug-helper)
 </p>
 
 ## Introduction

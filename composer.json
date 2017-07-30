@@ -3,6 +3,7 @@
   "description": "A library to help me output useful debug info during development.",
   "type": "library",
   "require": {
+    "php": "^7.1",
     "league/climate": "^3.2",
     "illuminate/support": "^5.4"
   },

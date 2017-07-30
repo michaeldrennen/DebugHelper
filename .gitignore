@@ -1,0 +1,6 @@
+/.idea/
+/vendor/
+/codeCoverage/
+/DEVNOTES.md
+/.gitignore
+/composer.lock

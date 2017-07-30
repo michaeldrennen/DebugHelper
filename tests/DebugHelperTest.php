@@ -4,13 +4,41 @@ namespace Tests;
 use MichaelDrennen\DebugHelper\DebugHelper;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * Class DebugHelperTest
+ * @package Tests
+ */
 class DebugHelperTest extends TestCase {
 
-    public function testPrintQueryLog () {
+    public function testLaravelReturnQueryLogTableString () {
 
-        $queryLogJsonContent = file_get_contents( './tests/testFiles/queryLog.json' );
+        $this->expectOutputRegex( '/-----------------------------------------------------------------------------------------------------------------------------------------------/' );
+        $queryLogJsonContent = file_get_contents( './tests/testFiles/laravelQueryLog.json' );
         $queryLog            = json_decode( $queryLogJsonContent, true );
-        print_r( $queryLog );
-        DebugHelper::printLaravelQueryLog( $queryLog );
+        $actualOutput        = DebugHelper::laravelPrintQueryLog( $queryLog, true );
+        print( $actualOutput );
     }
+
+
+    public function testLaravelPrintQueryLog () {
+
+        try {
+            $exception           = null;
+            $queryLogJsonContent = file_get_contents( './tests/testFiles/laravelQueryLog.json' );
+            $queryLog            = json_decode( $queryLogJsonContent, true );
+            DebugHelper::laravelPrintQueryLog( $queryLog );
+        } catch ( \Exception $exception ) {
+        }
+        $this->assertNull( $exception, "Unexpected exception thrown in test." );
+    }
+
+
+    public function testLaravelPrintQueryLogWithInvalidJsonShouldThrowException () {
+
+        $this->expectException( \TypeError::class );
+        $queryLogJsonContent = file_get_contents( './tests/testFiles/laravelQueryLogInvalid.json' );
+        $queryLog            = json_decode( $queryLogJsonContent, true );
+        DebugHelper::laravelPrintQueryLog( $queryLog );
+    }
+
 }
